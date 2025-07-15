@@ -1,1 +1,1 @@
-<img src="{{ asset('storage/tradeasia_logo.png') }}" alt="" class="w-24">
+<img src="{{ asset('storage/tradeasia-logo-blue.webp') }}" alt="" class="w-32">
