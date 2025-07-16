@@ -49,6 +49,13 @@ Jalankan perintah `npm run dev` agar tailwind di-reload oleh Vite.
 php artisan migrate:fresh --seed
 ```
 
+## 📸 Screenshot Program
+<img width="1678" height="1050" alt="image" src="https://github.com/user-attachments/assets/2f8cceb3-148a-4298-8e4b-a82e1dba431f" />
+<img width="1678" height="1050" alt="image" src="https://github.com/user-attachments/assets/51bc20ab-4f99-4f54-9f9d-3fc5015e14e2" />
+<img width="1678" height="1050" alt="image" src="https://github.com/user-attachments/assets/07d4db12-4a3a-451d-bd0f-318ed12f5594" />
+<img width="1678" height="1050" alt="image" src="https://github.com/user-attachments/assets/404dc2d2-b83f-4e17-a2c2-d3654d672555" />
+
+
 Terima kasih,
 
 Ageng Susila
