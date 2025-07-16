@@ -39,6 +39,7 @@ Seeder tersedia untuk akun admin.
 | `admin@tradeasia.test` | `admin123` |
 
 Seeder akan otomatis dibuat dengan `php artisan db:seed`.
+Jalankan perintah `npm run dev` agar tailwind di-reload oleh Vite.
 
 ---
 
@@ -46,3 +47,8 @@ Seeder akan otomatis dibuat dengan `php artisan db:seed`.
 
 ```bash
 php artisan migrate:fresh --seed
+```
+
+Terima kasih,
+
+Ageng Susila
