@@ -4,7 +4,7 @@
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-1">
     <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Nama (ID)</label>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Name (ID)</label>
         <input type="text" name="name[id]" value="{{ old('name.id', $isEdit ? $product->name['id'] ?? '' : '') }}"
             class="w-full rounded border-gray-300" required>
         @error('name.id')
@@ -12,7 +12,7 @@
         @enderror
     </div>
     <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">Nama (EN)</label>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Name (EN)</label>
         <input type="text" name="name[en]" value="{{ old('name.en', $isEdit ? $product->name['en'] ?? '' : '') }}"
             class="w-full rounded border-gray-300" required>
         @error('name.en')
@@ -40,7 +40,7 @@
 </div>
 
 <div class="mb-1">
-    <label class="block text-sm font-medium text-gray-700 mb-1">Gambar</label>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Picture</label>
     <input type="file" name="image" class="w-full text-sm">
 
     @error('image')
@@ -49,7 +49,7 @@
 
     @if (isset($product) && $product->image)
         <div class="mt-1">
-            <p class="text-sm text-gray-600 mb-1">Preview Gambar Saat Ini:</p>
+            <p class="text-sm text-gray-600 mb-1">Preview:</p>
             <img src="{{ asset('storage/' . $product->image) }}" alt="preview"
                 class="w-96 h-auto rounded shadow border">
         </div>
@@ -57,14 +57,14 @@
 </div>
 
 <div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Deskripsi (ID)</label>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Description (ID)</label>
     <textarea name="description[id]" rows="3" class="w-full rounded border-gray-300">{{ old('description.id', $isEdit ? $product->description['id'] ?? '' : '') }}</textarea>
     @error('description.id')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
     @enderror
 </div>
 <div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Deskripsi (EN)</label>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Description (EN)</label>
     <textarea name="description[en]" rows="3" class="w-full rounded border-gray-300">{{ old('description.id', $isEdit ? $product->description['id'] ?? '' : '') }}</textarea>
     @error('description.en')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -72,14 +72,14 @@
 </div>
 
 <div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Aplikasi (ID)</label>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Application (ID)</label>
     <textarea name="application[id]" rows="2" class="w-full rounded border-gray-300">{{ old('application.id', $isEdit ? $product->application['id'] ?? '' : '') }}</textarea>
     @error('application.id')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
     @enderror
 </div>
 <div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Aplikasi (EN)</label>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Application (EN)</label>
     <textarea name="application[en]" rows="2" class="w-full rounded border-gray-300">{{ old('application.en', $isEdit ? $product->application['en'] ?? '' : '') }}</textarea>
     @error('application.en')
         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -143,6 +143,6 @@
 
 <div class="pt-4">
     <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">
-        {{ $isEdit ? 'Update Produk' : 'Simpan Produk' }}
+        {{ $isEdit ? 'Update Product' : 'Save Product' }}
     </button>
 </div>
