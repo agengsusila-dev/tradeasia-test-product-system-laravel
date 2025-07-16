@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Daftar Produk') }}
+            {{ __('List Product') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -9,7 +9,7 @@
             <div class="bg-white p-6 shadow-sm rounded-lg">
                 <a href="{{ route('admin.products.create') }}"
                     class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded mb-4">
-                    + Tambah Produk
+                    + Add Product
                 </a>
 
                 @if (session('success'))
@@ -24,12 +24,12 @@
                     <table class="min-w-full border border-gray-300 text-sm">
                         <thead class="bg-gray-100 text-left">
                             <tr>
-                                <th class="px-4 py-2 border-b">No</th>
-                                <th class="px-4 py-2 border-b">Nama (EN)</th>
+                                <th class="px-4 py-2 border-b">No.</th>
+                                <th class="px-4 py-2 border-b">Name (EN)</th>
                                 <th class="px-4 py-2 border-b">HS Code</th>
                                 <th class="px-4 py-2 border-b">CAS Number</th>
                                 <th class="px-4 py-2 border-b">Image</th>
-                                <th class="px-4 py-2 border-b">Aksi</th>
+                                <th class="px-4 py-2 border-b">Menu</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,22 +49,22 @@
                                     </td>
                                     <td class="px-4 py-2 space-x-2">
                                         <a href="{{ route('admin.products.edit', $product->id) }}"
-                                            class="inline-block bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded text-xs">
-                                            Edit
+                                            class="inline-block bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded text-sm">
+                                            Update
                                         </a>
                                         <form action="{{ route('admin.products.destroy', $product->id) }}"
                                             method="POST" class="inline-block"
-                                            onsubmit="return confirm('Yakin hapus produk ini?')">
+                                            onsubmit="return confirm('Are you sure to delete this?')">
                                             @csrf
                                             @method('DELETE')
                                             <button
-                                                class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-xs">Hapus</button>
+                                                class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-sm">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="px-4 py-4 text-center text-gray-500">Belum ada produk.
+                                    <td colspan="6" class="px-4 py-4 text-center text-gray-500">No product data yet.
                                     </td>
                                 </tr>
                             @endforelse

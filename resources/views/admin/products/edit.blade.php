@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit Produk') }}
+            {{ __('Update Product') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -10,7 +10,7 @@
                 <div class="flex items-center justify-between mb-4">
                     <a href="{{ route('admin.products.index') }}"
                         class="bg-red-600 p-2 rounded text-sm text-white hover:bg-red-700">
-                        ← Kembali
+                        ← Back
                     </a>
                 </div>
 
